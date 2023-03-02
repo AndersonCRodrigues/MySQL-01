@@ -33,7 +33,7 @@ Você receberá planilhas não normalizadas que deverão ser normalizadas e popu
 <details>
   <summary>🗓 Data de Entrega</summary><br />
 
-- Serão `X` dias de projeto.
+- Serão `2` dias de projeto.
 - Data de entrega para avaliação final do projeto: `DD/MM/YYY - 14:00h`.
 
 </details>
@@ -145,7 +145,7 @@ Algumas coisas devem seguir um padrão pré-estabelecido para que os testes de c
 Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência preenchendo o formulário.
 **Leva menos de 3 minutos!**
 
-[FORMULÁRIO DE AVALIAÇÃO DE PROJETO](https://be-trybe.typeform.com/to/ZTeR4IbH)
+[FORMULÁRIO DE AVALIAÇÃO DE PROJETO](https://be-trybe.typeform.com/to/ZTeR4IbH#cohort_hidden=CH26-A&template=betrybe/sd-026-a-mysql-one-for-all)
 
 ## Requisitos obrigatórios
 
