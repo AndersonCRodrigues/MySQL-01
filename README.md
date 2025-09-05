@@ -92,7 +92,7 @@ Abaixo você pode visualizar e baixar uma planilha com as tabelas que deverão s
 > **Observação:** O banco de dados real do Spotify é muito mais completo e complexo que o mostrado abaixo. No entanto, use APENAS as informações passadas e solicitadas aqui. Não crie dados que não foram solicitados.
 
 [![Tabela não normalizada "Spotify Clone"](./images/non-normalized-tables.png)](./data/SpotifyClone-Non-NormalizedTable.xlsx)
-[Faça o download dela aqui](./SpotifyClone-Non-NormalizedTable.xlsx)
+[Faça o download dela aqui](./data/SpotifyClone-Non-NormalizedTable.xlsx)
 
 <details>
 <summary>🖥️ Software para acessar planilhas</summary><br />
