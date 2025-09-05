@@ -4,9 +4,6 @@ Para desenvolver os projetos, você deverá seguir as instruções a seguir.
 
 Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu projeto a partir deste repositório.
 
-<details>
-
-</details>
 
 ## Orientações
 
