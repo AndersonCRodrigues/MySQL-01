@@ -1,8 +1,0 @@
-{
-  "extends": "trybe-backend",
-  "rules": {
-    "max-lines": "off",
-    "camelcase": "off",
-    "class-methods-use-this": "off"
-  }
-}

@@ -1,40 +1,10 @@
-# Boas vindas ao repositório do projeto One For All
+# Boas vindas ao repositório do projeto MySQL 01
 
 Para desenvolver os projetos, você deverá seguir as instruções a seguir. Fique atento a cada passo e, se tiver qualquer dúvida, nos envie por Slack! #vqv 🚀
 
 Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu projeto a partir deste repositório, utilizando uma branch específica e um Pull Request para colocar seus códigos.
 
 <details>
-<summary>📃 Termos e acordos</summary><br>
-
-Ao iniciar este projeto, você concorda com as diretrizes do [Código de Conduta](https://app.betrybe.com/learn/student-manual/codigo-de-conduta-da-pessoa-estudante) e do [Manual da Pessoa Estudante](https://app.betrybe.com/learn/student-manual) da Trybe.
-
-</details>
-
-## Entregáveis
-
-<details>
-  <summary>🤷🏽‍♀️ Como entregar</summary><br />
-
-Para entregar o seu projeto você deverá criar um Pull Request neste repositório.
-
-Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/fc998c60-386e-46bc-83ca-4269beb17e17/section/fe827a71-3222-4b4d-a66f-ed98e09961af/day/35e03d5e-6341-4a8c-84d1-b4308b2887ef/lesson/573db55d-f451-455d-bdb5-66545668f436) e nosso [Blog - Git & GitHub](https://blog.betrybe.com/tecnologia/git-e-github/) sempre que precisar!
-</details>
-
-<details>
-  <summary>👨‍💻 O que deverá ser desenvolvido</summary><br />
-
-No projeto ***One For All***, você usará **algumas** tabelas para revisar e consolidar **todos** os principais conceitos vistos até o momento.
-
-Você receberá planilhas não normalizadas que deverão ser normalizadas e populadas em um banco de dados para que você possa executar queries com o intuito de encontrar as informações solicitadas.
-
-</details>
-
-<details>
-  <summary>🗓 Data de Entrega</summary><br />
-
-- Serão `2` dias de projeto.
-- Data de entrega para avaliação final do projeto: `DD/MM/YYY - 14:00h`.
 
 </details>
 
@@ -47,26 +17,10 @@ Você receberá planilhas não normalizadas que deverão ser normalizadas e popu
 ```bash
 docker-compose up -d
 docker exec -it one_for_all bash
-npm test # roda todos os testes
-npm test -- -t "01" # rodando apenas o teste do requisito 01
 ```
 
 <details>
-<summary>🐳 Mais informações</summary><br>
 
-O que cada comando faz:
-
-- `docker-compose up -d`
-  - Inicia os serviços `node` e `db`
-    - Esses serviços irão inicializar um container chamado `one_for_all` e outro chamado `one_for_all_db`.
-    - Ao iniciar pela primeira vez, o docker constrói a imagem do serviço `node`, instalando as dependências Node necessárias para a avaliação automatizada
-- `docker exec -it one_for_all bash`
-  - Acessa a linha de comando do container `one_for_all`
-    - Isso dá acesso ao terminal interativo do container criado pelo compose, que está rodando em segundo plano
-- `npm test`
-  - Roda os testes do avaliador
-
-> As credenciais de acesso ao banco de dados estão definidas no arquivo `docker-compose.yml`, e são acessíveis no container através das variáveis de ambiente `MYSQL_USER` e `MYSQL_PASSWORD`.
 
 </details>
 </details>
@@ -79,10 +33,7 @@ O que cada comando faz:
 > ⚠️ O avaliador espera que a versão do `node` utilizada seja a 16.
 
 ```bash
-npm install
 docker run -p 3306:3306 --name mysql_8 -e MYSQL_ROOT_PASSWORD=password --platform=linux/amd64 -d mysql:8.0.23 mysqld --default-authentication-plugin=mysql_native_password
-MYSQL_USER=root MYSQL_PASSWORD=password MYSQL_HOSTNAME=localhost npm test # roda todos os testes
-MYSQL_USER=root MYSQL_PASSWORD=password MYSQL_HOSTNAME=localhost npm test -- -t "01" # rodando apenas o teste do requisito 01
 ```
 
 <details>
@@ -90,12 +41,8 @@ MYSQL_USER=root MYSQL_PASSWORD=password MYSQL_HOSTNAME=localhost npm test -- -t 
 
 O que cada comando faz:
 
-- `npm install`
-  - Instala as dependências Node necessárias para os testes do avaliador
 - `docker run -p 3306:3306 --name mysql_8 -e MYSQL_ROOT_PASSWORD=password --platform=linux/amd64 -d mysql:8.0.23 mysqld --default-authentication-plugin=mysql_native_password`
   - Cria um container MySQL com as variáveis de ambiente definidas
-- `MYSQL_USER=root MYSQL_PASSWORD=password MYSQL_HOSTNAME=localhost npm test`
-  - Roda os testes do avaliador passando as variáveis de ambiente
 
 </details>
 </details>
@@ -130,32 +77,8 @@ Algumas coisas devem seguir um padrão pré-estabelecido para que os testes de c
 5. Atente-se a detalhes de digitação em seu código. Qualquer diferença em nomes, apelidos, ou CAIXA ALTA e caixa baixa podem invalidar suas respostas.
    - **Não se esqueça de incluir o ponto e vírgula (";")** no final de suas queries.
 
-6. Faça isso até finalizar todos os desafios e depois siga as instruções de como entregar o projeto na seção **Git e Github** na [FAQ](./FAQ.md#git-e-github).
-
-7. Para entregar o seu projeto você deverá criar um *Pull Request* neste repositório. Este *Pull Request* deverá conter tanto os arquivos de configurações `desafio1.json` e `desafio10.json` quanto os arquivos `desafio1.sql`, `desafio2.sql` e assim por diante até o `desafio13.sql`, que conterão seu código `SQL` de cada desafio, respectivamente.
-
-   - **⚠️ É importante que seus arquivos tenham exatamente estes nomes! ⚠️**
 
 </details>
-
-### 💡 Dica: Qualquer dúvida, dê uma olhada na [FAQ](./FAQ.md) ou procure a monitoria. Bom projeto! 🚀
-
-### **🗣 Nos dê feedbacks sobre o projeto**
-
-Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência preenchendo o formulário.
-**Leva menos de 3 minutos!**
-
-[FORMULÁRIO DE AVALIAÇÃO DE PROJETO](https://be-trybe.typeform.com/to/ZTeR4IbH#cohort_hidden=CH26-A&template=betrybe/sd-026-a-mysql-one-for-all)
-
-## Requisitos obrigatórios
-
-⚠️ **AVISO IMPORTANTE:** Você deve escrever sua query manualmente, com o gerador automático de queries do Workbench o avaliador não funcionará corretamente!
-
-Você recebeu uma planilha não normalizada semelhante ao que poderia ser uma versão simplificada do banco de dados do Spotify. O trabalho consistirá de duas partes:
-
-1. Normalizar essa planilha, criar as tabelas no seu banco de dados local e populá-lo;
-
-2. Realizar os desafios no seu banco normalizado e populado.
 
 ## Desafio 1
 
@@ -231,40 +154,6 @@ A planilha acima foi normalizada? Ótimo! Agora siga com os passos abaixo:
 
 - Providencie as queries necessárias para popular as tabelas do banco de dados de acordo com as dados da planilha fornecida anteriormente;
 
-- Ajuste o arquivo de configurações `desafio1.json`, que mapeará em qual tabela e coluna se encontram as informações necessárias para a avaliação automatizada deste desafio.
-
-  <details>
-  <summary>👇 As configurações devem possuir o seguinte formato</summary><br />
-
-  ```json
-  {
-    "tabela_pessoas_usuarias": "nome-da-tabela-de-pessoas-usuárias",
-    "coluna_pessoas_usuarias": "nome-da-coluna-da-pessoa-usuária",
-    "tabela_plano": "nome-da-tabela-do-plano",
-    "coluna_plano": "nome-da-coluna-do-plano",
-    "tabela_historico_de_reproducoes": "nome-da-tabela-do-histórico-de-reproduções",
-    "coluna_historico_de_reproducoes": "nome-da-coluna-da-canção",
-    "tabela_seguindo_artistas": "nome-da-tabela-de-seguidores-dos-artistas",
-    "coluna_seguindo_artistas": "nome-da-coluna-da-artista",
-    "tabela_artista": "nome-da-tabela-de-artistas",
-    "coluna_artista": "nome-da-coluna-da-pessoa-artista",
-    "tabela_album": "nome-da-tabela-de-álbuns",
-    "coluna_album": "nome-da--coluna-do-álbum",
-    "tabela_cancoes": "nome-da-tabela-de-canções",
-    "coluna_cancoes": "nome-da-coluna-da-canção"
-  }
-  ```
-
-  Essa configuração deve ser feita baseada no seu banco de dados **após a normalização**. Ou seja, se você criou uma tabela chamada `users` que possui a coluna `name`, você substituiria `"coluna_pessoa_usuaria"` e `"tabela_pessoa_usuaria"` da seguinte forma:
-
-  ```json
-  {
-    "tabela_pessoa_usuaria": "users",
-    "coluna_pessoa_usuaria": "name",
-    ...
-  }
-  ```
-
 </details>
 
 - Salve as queries criadas no arquivo `desafio1.sql`.
@@ -276,25 +165,25 @@ A planilha acima foi normalizada? Ótimo! Agora siga com os passos abaixo:
 
     CREATE DATABASE SpotifyClone;
 
-    CREATE TABLE SpotifyClone.tabela1(
+    CREATE TABLE IF NOT EXISTS tabela1(
         coluna1 tipo restricoes,
         coluna2 tipo restricoes,
         colunaN tipo restricoes,
     ) engine = InnoDB;
 
-    CREATE TABLE SpotifyClone.tabela2(
+    CREATE TABLE IF NOT EXISTS tabela2(
         coluna1 tipo restricoes,
         coluna2 tipo restricoes,
         colunaN tipo restricoes,
     ) engine = InnoDB;
 
-    INSERT INTO SpotifyClone.tabela1 (coluna1, coluna2)
+    INSERT INTO tabela1 (coluna1, coluna2)
     VALUES
       ('exemplo de dados 1', 'exemplo de dados A'),
       ('exemplo de dados 2', 'exemplo de dados B'),
       ('exemplo de dados 3', 'exemplo de dados C');
 
-    INSERT INTO SpotifyClone.tabela2 (coluna1, coluna2)
+    INSERT INTO tabela2 (coluna1, coluna2)
     VALUES
       ('exemplo de dados 1', 'exemplo de dados X'),
       ('exemplo de dados 2', 'exemplo de dados Y');
@@ -311,13 +200,13 @@ A planilha acima foi normalizada? Ótimo! Agora siga com os passos abaixo:
   - 1:N - Por exemplo, uma série pode ter vários episódios, mas um episódio só pertence a uma série;
   - N:M - Por exemplo, um filme pode ter vários atores e um ator pode atuar em vários filmes, porém nem a tabela atores dever manter dados de filmes, e nem a de filmes deve manter dados.
 - Após criar suas tabelas normalizadas na planilha, é possível usar ferramentas de conversão de tabelas como o site [TableConvert](https://tableconvert.com/excel-to-sql) para gerar os comandos SQL `INSERT` mais rapidamente.
-  
+
   ⚠️ **Atenção**: Será necessário ajustar os comandos gerados para se ter os relacionamentos e tipos de campos corretos na tabela.
-  
+
   <details><summary>GIF de demonstração da ferramenta</summary>
-  
+
   ![Convertendo uma tabela do Excel para SQL INSERTs no site TableConvert](images/table-convert.gif)
-  
+
   </details>
 
 </details>
@@ -663,7 +552,7 @@ Seu banco de dados deve seguir as regras de negócio e ser capaz de recuperar:
     ```json
     {
       "tabela_cancoes_favoritas": "nome-da-tabela-de-canções-favoritas",
-      "coluna_cancoes_favoritas": "nome-da-coluna-de-canções-favoritas", 
+      "coluna_cancoes_favoritas": "nome-da-coluna-de-canções-favoritas",
     }
     ```
 
